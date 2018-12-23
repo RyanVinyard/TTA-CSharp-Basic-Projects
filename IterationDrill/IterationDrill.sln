@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterationDrill", "IterationDrill\IterationDrill.csproj", "{E7496A4A-2422-4115-8ECD-B76E006ABBDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7496A4A-2422-4115-8ECD-B76E006ABBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7496A4A-2422-4115-8ECD-B76E006ABBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7496A4A-2422-4115-8ECD-B76E006ABBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7496A4A-2422-4115-8ECD-B76E006ABBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB5EF531-7F6B-4F11-A7F4-3612549C5E3C}
+	EndGlobalSection
+EndGlobal
