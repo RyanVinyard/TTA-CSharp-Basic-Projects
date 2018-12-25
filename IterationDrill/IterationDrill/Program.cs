@@ -38,7 +38,7 @@ class Program
             favNumber = 5;
         }
 
-                     
+        favNumber = Convert.ToInt16(favNumberString);
         
         while (favNumber > 10 || favNumber < 1)
         {
@@ -67,6 +67,20 @@ class Program
         {
             Console.WriteLine(favNumber + " " + (i));
         }
+
+        Console.ReadLine();
+
+        List<string> messyList = new List<string>();
+        string[] numbers = { "two", "five", "four", "ten", "nine", "one", "three", "six", "eight", "seven" };
+        messyList.AddRange(numbers);
+
+
+        foreach (string i in messyList)
+        {
+            Console.WriteLine(i);
+        }
+
+        Console.WriteLine("\nOh no, we've got such a messy list of numbers above, and I need YOUR help to fix them. Type in one of the numbers and you can see what index it's at.");
 
         Console.ReadLine();
 
