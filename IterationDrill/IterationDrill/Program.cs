@@ -75,13 +75,61 @@ class Program
         messyList.AddRange(numbers);
 
 
-        foreach (string i in messyList)
+        foreach (string number in messyList)
         {
-            Console.WriteLine(i);
+            Console.WriteLine(number);
         }
 
         Console.WriteLine("\nOh no, we've got such a messy list of numbers above, and I need YOUR help to fix them. Type in one of the numbers and you can see what index it's at.");
+        string searchValue = Console.ReadLine();
 
+        foreach (string number in messyList)
+        {
+            if (searchValue == number)
+            {
+                Console.WriteLine(searchValue + " is at index value: " + messyList.IndexOf(number));
+            }
+
+            if (!messyList.Contains(searchValue))
+            {
+                Console.WriteLine("That's not a number in the list, did you make a typo? Try again.");
+                searchValue = Console.ReadLine();
+            }
+        }
+
+
+        List<string> secondList = new List<string>();
+        string[] repeatingNumbers = { "one", "two", "two", "three", "one", "two", "one", "three", "four" };
+        secondList.AddRange(repeatingNumbers);
+
+        foreach (string number in secondList)
+        {
+            Console.WriteLine(number);
+        }
+
+        Console.WriteLine("\nWe have some more numbers here, type in a number to see how many indicies it appears in.");
+        Console.WriteLine("I'm not running out of ideas, you're running out of ideas.");
+        searchValue = Console.ReadLine();
+        int j = 0;
+
+        foreach (string number in secondList)
+        {
+            if (searchValue == number)
+            {
+                
+                Console.WriteLine(searchValue + " is at index value: " + secondList.IndexOf(number));
+                j++;
+                
+            }
+
+            if (!secondList.Contains(searchValue))
+            {
+                Console.WriteLine("That's not a number in the list, try again");
+                searchValue = Console.ReadLine();
+            }
+        }
+
+        Console.WriteLine("Looks like " + searchValue + " appeared in that list " + j + " times!");
         Console.ReadLine();
 
 
