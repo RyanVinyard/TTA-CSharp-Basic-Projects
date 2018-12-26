@@ -30,20 +30,31 @@ class Program
 
         int favNumber = 0;
 
-        string favNumberString = Convert.ToString(Console.ReadLine());
+        
 
-        if(String.IsNullOrEmpty(favNumberString))
+
+        
+
+        while (!int.TryParse(Console.ReadLine(), out favNumber))
         {
-            Console.WriteLine("You didn't enter a number, so I'll just assume your number is 5.");
-            favNumber = 5;
+            Console.WriteLine("Oops, you didn't enter anything.");
+            Console.WriteLine("Pick a number between 1 and 10:");
         }
 
-        favNumber = Convert.ToInt16(favNumberString);
+       
+
+        
         
         while (favNumber > 10 || favNumber < 1)
         {
             Console.WriteLine("That's not between 1 and 10, try again.");
-            favNumber = Convert.ToInt16(Console.ReadLine());
+            
+
+            while (!int.TryParse(Console.ReadLine(), out favNumber))
+        {
+            Console.WriteLine("Oops, you didn't enter anything.");
+            Console.WriteLine("Pick a number between 1 and 10:");
+        }
 
         }
 
@@ -68,8 +79,7 @@ class Program
             Console.WriteLine(favNumber + " " + (i));
         }
 
-        Console.ReadLine();
-
+       
         List<string> messyList = new List<string>();
         string[] numbers = { "two", "five", "four", "ten", "nine", "one", "three", "six", "eight", "seven" };
         messyList.AddRange(numbers);
@@ -117,9 +127,8 @@ class Program
             if (searchValue == number)
             {
                 
-                Console.WriteLine(searchValue + " is at index value: " + secondList.IndexOf(number));
                 j++;
-                
+                                
             }
 
             if (!secondList.Contains(searchValue))
@@ -129,8 +138,21 @@ class Program
             }
         }
 
-        Console.WriteLine("Looks like " + searchValue + " appeared in that list " + j + " times!");
+        Console.WriteLine("Looks like " + searchValue + " appeared in that list " + j + " times! Wow!");
+
+        List<string> sodaList = new List<string>();
+        string[] sodas = { "Coke", "Pepsi", "Dr. Pepper", "Coke", "Sprite", "Dr. Pepper", "Root Beer" };
+        sodaList.AddRange(sodas);
+        int s = 0;
+
+        foreach (string soda in sodaList)
+        {
+            Console.WriteLine(soda + " appeared: " + s);
+            s++;
+        }
+
         Console.ReadLine();
+
 
 
 
