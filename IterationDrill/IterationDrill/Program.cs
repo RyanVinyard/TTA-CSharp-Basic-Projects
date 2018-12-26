@@ -163,16 +163,7 @@ class Program
         Console.WriteLine("Looks like there were " + s + " duplicates in there.");
 
         Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
+                                    
     }
 }
 
