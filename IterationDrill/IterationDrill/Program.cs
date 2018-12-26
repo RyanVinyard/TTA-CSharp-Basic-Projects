@@ -29,22 +29,13 @@ class Program
         Console.WriteLine("\nOk, thanks for the list! Now, pick a number between 1 and 10");
 
         int favNumber = 0;
-
         
-
-
-        
-
         while (!int.TryParse(Console.ReadLine(), out favNumber))
         {
             Console.WriteLine("Oops, you didn't enter anything.");
             Console.WriteLine("Pick a number between 1 and 10:");
         }
 
-       
-
-        
-        
         while (favNumber > 10 || favNumber < 1)
         {
             Console.WriteLine("That's not between 1 and 10, try again.");
@@ -138,18 +129,38 @@ class Program
             }
         }
 
-        Console.WriteLine("Looks like " + searchValue + " appeared in that list " + j + " times! Wow!");
+        Console.WriteLine("Looks like " + searchValue + " appeared in that list " + j + " times! Wow!\n");
 
         List<string> sodaList = new List<string>();
         string[] sodas = { "Coke", "Pepsi", "Dr. Pepper", "Coke", "Sprite", "Dr. Pepper", "Root Beer" };
         sodaList.AddRange(sodas);
+        foreach (string soda in sodaList)
+        {
+            Console.WriteLine(soda);
+        }
+        Console.WriteLine("\nHere's a list of sodas, let's see what the duplicates are.\n");
+        
         int s = 0;
+        List<string> checkList = new List<string>();
+
+
 
         foreach (string soda in sodaList)
         {
-            Console.WriteLine(soda + " appeared: " + s);
-            s++;
+            if (checkList.Contains(soda))
+            {
+                Console.WriteLine(soda + " has already appeared on this list!");
+                s++;
+            }
+            if (!checkList.Contains(soda))
+            {
+                Console.WriteLine(soda + " has not yet appeared on this list!");
+                checkList.Add(soda);                
+            }
+                        
         }
+
+        Console.WriteLine("Looks like there were " + s + " duplicates in there.");
 
         Console.ReadLine();
 
