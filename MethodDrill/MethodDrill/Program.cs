@@ -4,20 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassDrill
+namespace MethodDrill
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            MathClass mathOne = new MathClass();
-            mathOne.Value = 1;
-
-            Console.WriteLine(mathOne.Value);
-            Console.ReadLine();
-
-
         }
     }
 }

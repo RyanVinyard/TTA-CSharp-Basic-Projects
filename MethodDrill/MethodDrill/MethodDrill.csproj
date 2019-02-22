@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD6BDAC2-2947-4EE9-A3A8-8F366146638E}</ProjectGuid>
+    <ProjectGuid>{D11410D6-9FF2-463B-B48F-A8CF9D769BF7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClassDrill</RootNamespace>
-    <AssemblyName>ClassDrill</AssemblyName>
+    <RootNamespace>MethodDrill</RootNamespace>
+    <AssemblyName>MethodDrill</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MathClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
