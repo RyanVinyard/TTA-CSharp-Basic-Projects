@@ -12,13 +12,23 @@ namespace ClassDrill4
         {
 
             TestClass testClass = new TestClass();
-                        
+                                    
             Console.WriteLine("Give me a number: ");
             int required = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("If you want, give a second number, or just hit enter: ");
-            int optional = Convert.ToInt32(Console.ReadLine());
+            string optional = Console.ReadLine();
+            if (optional == "")
+            {
+                required = testClass.TestMethod(required);
+            }
+            else
+            {
+                required = testClass.TestMethod(required, Convert.ToInt32(optional));
+            }
+            
+            
 
-            required = testClass.TestMethod(required, optional);
+          
 
 
             Console.WriteLine("We have: " + required);
