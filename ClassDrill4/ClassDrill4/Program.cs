@@ -25,12 +25,7 @@ namespace ClassDrill4
             {
                 required = testClass.TestMethod(required, Convert.ToInt32(optional));
             }
-            
-            
-
-          
-
-
+              
             Console.WriteLine("We have: " + required);
 
             Console.ReadLine();
