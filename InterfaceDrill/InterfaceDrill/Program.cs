@@ -10,6 +10,14 @@ namespace InterfaceDrill
     {
         static void Main(string[] args)
         {
+            Person person = new Employee();
+
+            IQuittable quit = new Employee();
+
+            quit.Quit(person);
+
+            Console.ReadLine();
+
         }
     }
 }
