@@ -41,7 +41,11 @@ namespace ParameterDrill
             solution = testClass.SimpleAddition(input1, input2, input3);
             Console.WriteLine("Using the overloaded method SimpleAddition, we have added the three numbers to equal " + solution);
 
-            Console.ReadLine();           
+            Console.ReadLine();
+
+            StaticClass.StaticMethod();
+
+            Console.ReadLine();
 
         }
     }
