@@ -14,7 +14,15 @@ namespace ConsoleApp1
             person.FirstName = "Ryan";
             person.LastName = "Vinyard";
 
+            
+
+            Employee employee = new Employee();
+            employee.FirstName = "Sample";
+            employee.LastName = "Student";
+
             person.SayName();
+
+            employee.SayName();
 
             Console.ReadLine();
 
