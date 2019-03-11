@@ -13,9 +13,7 @@ namespace ConsoleApp1
             Person person = new Person();
             person.FirstName = "Ryan";
             person.LastName = "Vinyard";
-
-            
-
+                        
             Employee employee = new Employee();
             employee.FirstName = "Sample";
             employee.LastName = "Student";
