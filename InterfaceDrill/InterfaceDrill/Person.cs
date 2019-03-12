@@ -12,6 +12,7 @@ namespace InterfaceDrill
         public String LastName { get; set; }
         public int Id { get; set; }
 
+
         public abstract void SayName();
 
         public static bool operator ==(Person person1, Person person2)
