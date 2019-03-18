@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorChainDrill", "ConstructorChainDrill\ConstructorChainDrill.csproj", "{A928466E-DEEF-4885-84D2-BAC7164287CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A928466E-DEEF-4885-84D2-BAC7164287CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A928466E-DEEF-4885-84D2-BAC7164287CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A928466E-DEEF-4885-84D2-BAC7164287CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A928466E-DEEF-4885-84D2-BAC7164287CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B10EA54C-F7F2-483F-AA6D-F9DC54731BA2}
+	EndGlobalSection
+EndGlobal
