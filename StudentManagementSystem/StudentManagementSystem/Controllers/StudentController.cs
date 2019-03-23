@@ -66,5 +66,82 @@ namespace StudentManagementSystem.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(int id)
+        {
+            string queryString = "SELECT * FROM STUDENTS WHERE id = @id";
+            Student student = new Student();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add("@id", SqlDbType.Int);
+
+                command.Parameters["@id"].Value = id;
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    student.Id = Convert.ToInt32(reader["Id"]);
+                    student.FirstName = reader["FirstName"].ToString();
+                    student.LastName = reader["LastName"].ToString();
+                }
+                connection.Close();
+            }
+            return View(student);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            string queryString = "SELECT * FROM STUDENTS WHERE id = @id";
+            Student student = new Student();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add("@id", SqlDbType.Int);
+
+                command.Parameters["@id"].Value = id;
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    student.Id = Convert.ToInt32(reader["Id"]);
+                    student.FirstName = reader["FirstName"].ToString();
+                    student.LastName = reader["LastName"].ToString();
+                }
+                connection.Close();
+            }
+            return View(student);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Student student)
+        {
+            string queryString = @"UPDATE STUDENTS SET FirstName = @FirstName, LastName = @LastName WHERE Id = @Id";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add("@Id", SqlDbType.Int);
+                command.Parameters.Add("@FirstName", SqlDbType.VarChar);
+                command.Parameters.Add("@LastName", SqlDbType.VarChar);
+
+                command.Parameters["@Id"].Value = student.Id;
+                command.Parameters["@FirstName"].Value = student.FirstName;
+                command.Parameters["@LastName"].Value = student.LastName;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
